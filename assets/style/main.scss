@@ -1,0 +1,135 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+$spacer1 : 3vw;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.magnet {
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.nav {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: $spacer1;
+    padding-right: $spacer1;
+    font-family: 'azeret';
+    background-color: $grey_1;
+    font-size: 18px;
+    color: $white;
+
+    .brand a {
+        display: flex;
+        gap: 6px;
+
+        .char_c {
+            transition: all .35s ease-out;
+        }
+
+        font-weight: 600 !important;
+        text-decoration: none;
+        color: $white;
+        transition: color .16s ease-out;
+
+
+        &:hover {
+            color: $grey_2;
+
+            .char_c {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: $spacer1;
+
+        .nav_item {
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: $white;
+                transition: all .16s ease-out;
+                margin-bottom: 0px;
+            }
+
+            .point {
+                transition: all .16s ease-out;
+                position: absolute;
+                left: 50%;
+                bottom: -18px;
+                transform: translateX(-50%);
+                height: 0px;
+                width: 0px;
+                border-radius: 50%;
+                background-color: $grey_2;
+            }
+
+            &:hover {
+                a {
+                    color: $grey_2;
+                }
+
+                .point {
+                    height: 8px;
+                    width: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.hero_container {
+    background-color: $grey_1;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO 
+.nav_toggle {
+    display: none;
+}

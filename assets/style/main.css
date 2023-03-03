@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "azeret";
+  src: url(../Fonts/AzeretProportionalUprightVF.ttf);
+}
+@font-face {
+  font-family: "azeret_ita";
+  src: url(../Fonts/AzeretProportionalItalicVF.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.magnet {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav {
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-family: "azeret";
+  background-color: #999D9E;
+  font-size: 18px;
+  color: #F5F9F9;
+}
+.nav .brand a {
+  display: flex;
+  gap: 6px;
+  font-weight: 600 !important;
+  text-decoration: none;
+  color: #F5F9F9;
+  transition: color 0.16s ease-out;
+}
+.nav .brand a .char_c {
+  transition: all 0.35s ease-out;
+}
+.nav .brand a:hover {
+  color: #181C1F;
+}
+.nav .brand a:hover .char_c {
+  transform: rotate(360deg);
+}
+.nav .navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+}
+.nav .navbar .nav_item {
+  position: relative;
+}
+.nav .navbar .nav_item a {
+  text-decoration: none;
+  color: #F5F9F9;
+  transition: all 0.16s ease-out;
+  margin-bottom: 0px;
+}
+.nav .navbar .nav_item .point {
+  transition: all 0.16s ease-out;
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: #181C1F;
+}
+.nav .navbar .nav_item:hover a {
+  color: #181C1F;
+}
+.nav .navbar .nav_item:hover .point {
+  height: 8px;
+  width: 8px;
+}
+
+.hero_container {
+  background-color: #999D9E;
+  height: 100vh;
+}
+
+.nav_toggle {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
