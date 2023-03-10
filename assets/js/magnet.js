@@ -56,10 +56,10 @@ var hoverMouse = function ($el) {
 
         var onHover = function (x, y) {
             TweenMax.to($self, 0.4, {
-                x: x * 0.25,
-                y: y * 0.25,
+                x: x * 0.15,
+                y: y * 0.15,
                 //scale: .9,
-                rotation: x * 0.05,
+                rotation: x * 0.005,
                 ease: Power2.easeOut
             });
         };

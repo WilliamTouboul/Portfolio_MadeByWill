@@ -5,4 +5,8 @@
 @font-face {
   font-family: "azeret_ita";
   src: url(../Fonts/AzeretProportionalItalicVF.ttf);
+}
+@font-face {
+  font-family: "machina";
+  src: url("../Fonts/PPNeueMachina/PPNeueMachina-PlainRegular.otf");
 }/*# sourceMappingURL=fonts.css.map */

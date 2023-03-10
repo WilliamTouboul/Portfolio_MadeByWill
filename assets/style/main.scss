@@ -10,10 +10,17 @@ $spacer1 : 3vw;
     font-weight: 400;
 }
 
+body {
+    min-height: 300vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .magnet {
     display: inline-block;
     text-decoration: none;
-
 }
 
 .nav {
@@ -23,30 +30,52 @@ $spacer1 : 3vw;
     align-items: center;
     padding-left: $spacer1;
     padding-right: $spacer1;
-    font-family: 'azeret';
+    font-family: 'machina';
     background-color: $grey_1;
     font-size: 18px;
     color: $white;
+
+    * {
+        letter-spacing: -1px;
+    }
+
 
     .brand a {
         display: flex;
         gap: 6px;
 
-        .char_c {
-            transition: all .35s ease-out;
-        }
 
         font-weight: 600 !important;
         text-decoration: none;
         color: $white;
         transition: color .16s ease-out;
 
+        .char_c {
+            transition: all .35s ease-out;
+        }
+
+        .point {
+            transition: all .16s ease-out;
+            position: absolute;
+            left: 50%;
+            bottom: -18px;
+            transform: translateX(-50%);
+            height: 0px;
+            width: 0px;
+            border-radius: 50%;
+            background-color: $white;
+        }
 
         &:hover {
-            color: $grey_2;
+
 
             .char_c {
                 transform: rotate(360deg);
+            }
+
+            .point {
+                height: 8px;
+                width: 8px;
             }
         }
     }
@@ -75,13 +104,10 @@ $spacer1 : 3vw;
                 height: 0px;
                 width: 0px;
                 border-radius: 50%;
-                background-color: $grey_2;
+                background-color: $white;
             }
 
             &:hover {
-                a {
-                    color: $grey_2;
-                }
 
                 .point {
                     height: 8px;
@@ -93,30 +119,120 @@ $spacer1 : 3vw;
 }
 
 
-
 .hero_container {
+    overflow: hidden;
     background-color: $grey_1;
     height: 100vh;
+
+
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7%;
+        align-items: end;
+        padding-right: 10vw;
+
+        .location {
+            background-color: $grey_2;
+            min-width: 15vw;
+            height: 100px;
+            display: flex;
+            border-radius: 0 50px 50px 0;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 40px;
+
+
+            p {
+                font-family: 'machina';
+                color: $white;
+            }
+
+            .globe_container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $grey_1;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                height: 75px;
+                width: 75px;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    animation: 4.5s rotate_globe linear infinite;
+                }
+            }
+        }
+
+        .header_right {
+            display: flex;
+            flex-direction: column;
+
+            svg {
+                height: 35px;
+                width: 35px;
+                margin-bottom: 120px;
+            }
+
+            h2 {
+                color: $white;
+                font-size: 44px;
+                font-family: 'machina';
+                letter-spacing: -2px;
+                height: 140px;
+            }
+        }
+    }
+
+}
+
+
+
+@keyframes rotate_globe {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
 
 
 
 
+.wrapperRollingText {
+    white-space: nowrap;
+    font-family: 'machina';
+    font-size: 13vw;
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    user-select: none;
+}
 
+.rollingText {
+    display: inline-block;
+    padding-left: 10px;
+}
 
+.limits {
+    position: fixed;
+    top: 20vh;
+    height: 50vh;
+    width: 100px;
 
+}
 
-
-
-
-
-
-
-
-
-
-
+.half {
+    position: fixed;
+    top: 50vh;
+    width: 100px;
+}
 
 
 
