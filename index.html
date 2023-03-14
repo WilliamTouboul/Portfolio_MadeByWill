@@ -12,15 +12,19 @@
 </head>
 
 <body>
-    <!-- Bouton pour la nav, a faire apparaitre au scroll -->
-    <div class="nav_toggle"></div>
-
+    <!-- NAV_menu -->
+    <div class="nav_toggle effect_button magnet">
+        <div class="ico magnet">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="effect_button_inside"></div>
+    </div>
+    <!--NAVBAR -->
     <nav class="nav">
         <div class="brand magnet">
             <a href="#">
-                <div class="char_c">©</div> Made By Will
-                <div class="point"></div>
-
+                <div class="char_c">©</div>MadeByWill<div class="point"></div>
             </a>
         </div>
 
@@ -50,8 +54,21 @@
                     <br>
                     France
                 </p>
-                <div class="globe_container">
-                    <img src="assets/images/icons/Globe_icon.svg" alt="">
+                <div class="globe_container magnet">
+                    <div class="digital_ball ">
+                        <div class="globe">
+                            <div class="overlay"></div>
+                            <div class="globe_wrap">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle-hor"></div>
+                                <div class="circle-hor-middle"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -80,7 +97,7 @@
             </div>
 
         </div>
-            
+
         <div class="limits"></div>
         <div class="half"></div>
 
@@ -92,17 +109,137 @@
     </div>
 
 
+    <section class="home_about">
+        <div class="left">
+            <h2>
+                Ensemble, nous travaillerons pour aider votre marque a briller en établissant de nouveaux
+                standards. Nous serons constamment a la pointe sans perdre de temps pour vous amener un service optimal.
+            </h2>
+        </div>
+        <div class="right">
+            <p>
+                La combinaison de mes passions pour le design, le code et la communication me place parfaitement pour
+                vous apporter un savoir faire unique et complet.
+            </p>
+            <div class="about_button effect_button magnet">
+                <div class="ico text magnet">
+                    <p>A propos</p>
+                </div>
+                <div class="effect_button_inside"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home_approche">
+        <h3>Mon approche</h3>
+        <p>
+            Je propose des services de conception et de développement de sites web haut de gamme, qui se démarquent par
+            leur approche globale et leur engagement en faveur de l'éco-responsabilité. Ma méthode exhaustive couvre
+            toutes les étapes de la conception, depuis la planification jusqu'à la maintenance, afin de créer des sites
+            web sur mesure répondant aux besoins de mes clients. Je suis également soucieux de l'environnement et
+            j'utilise des pratiques de développement éco-responsables pour minimiser mon impact environnemental.
+        </p>
+    </section>
+
+    <section class="home_skills">
+        <h3>Mes compétences</h3>
+        <div class="skill_grid">
+            <div>
+                <h4>Branding</h4>
+                <ul>
+                    <li>Moodboard</li>
+                    <li>Stratégie de marque</li>
+                    <li>Réseaux sociaux</li>
+                </ul>
+            </div>
+            <div>
+                <h4>UI/UX Design</h4>
+                <ul>
+                    <li>Interface utilisateur</li>
+                    <li>Experience utilisateur</li>
+                    <li>Design System</li>
+                    <li>Wireframe</li>
+                    <li>Prototype</li>
+                    <li>Site web & application mobile</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Développement</h4>
+                <ul>
+                    <li>Front End</li>
+                    <li>Back End</li>
+                    <li>Wordpress</li>
+                    <li>Référencement</li>
+                    <li>Site web & application mobile</li>
+                    <li>Maintenance</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Print</h4>
+                <ul>
+                    <li>Affiches</li>
+                    <li>Flyers</li>
+                    <li>Cartes de visite</li>
+                    <li>Dossier de présentation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="home_works">
+        <h3>Mes réalisations</h3>
+
+        <ul>
+            <li data-target="" class="project_item" data-img="assets/images/projects/1.jpg">
+                <h2>Project Name</h2>
+                <p>Category</p>
+            </li>
+
+            <li data-target="" class="project_item" data-img="assets/images/projects/2.jpg">
+                <h2>Project Name</h2>
+                <p>Category</p>
+            </li>
+
+            <li data-target="" class="project_item" data-img="assets/images/projects/3.jpg">
+                <h2>Project Name</h2>
+                <p>Category</p>
+            </li>
+
+            <li data-target="" class="project_item" data-img="assets/images/projects/4.jpg">
+                <h2>Project Name</h2>
+                <p>Category</p>
+            </li>
+
+            <li data-target="" class="project_item" data-img="assets/images/projects/5.jpg">
+                <h2>Project Name</h2>
+                <p>Category</p>
+            </li>
+
+        </ul>
 
 
 
+        <div class="effect_button more_works_button magnet">
+            <div class="ico magnet">
+                Plus de projets <span>12</span>
+            </div>
+            <div class="effect_button_inside"></div>
+        </div>
+    </section>
 
 
-    <div class="cursor"></div>
+    <div class="gallery_viewer">
+    </div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/magnet.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/gallery.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "azeret";
-  src: url(../Fonts/AzeretProportionalUprightVF.ttf);
-}
-@font-face {
-  font-family: "azeret_ita";
-  src: url(../Fonts/AzeretProportionalItalicVF.ttf);
-}
-@font-face {
   font-family: "machina";
   src: url("../Fonts/PPNeueMachina/PPNeueMachina-PlainRegular.otf");
+}
+@font-face {
+  font-family: "machina_thin";
+  src: url(../Fonts/PPNeueMachina/PPNeueMachina-PlainLight.otf);
+}
+@font-face {
+  font-family: "machina_bold";
+  src: url(../fonts/PPNeueMachina/PPNeueMachina-PlainUltrabold.otf);
 }/*# sourceMappingURL=fonts.css.map */

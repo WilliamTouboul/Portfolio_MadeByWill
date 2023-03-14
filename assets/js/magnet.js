@@ -6,14 +6,15 @@ var hoverMouse = function ($el) {
         var offsetHoverMin = $self.attr("offset-hover-min") || 0.5;
 
         var attachEventsListener = function () {
+
             $(window).on("mousemove", function (e) {
                 //
                 var hoverArea = hover ? offsetHoverMax : offsetHoverMin;
 
                 // cursor
                 var cursor = {
-                    x: e.clientX,
-                    y: e.clientY - $(window).scrollTop()
+                    x: e.pageX,
+                    y: e.pageY
                 };
 
                 // size
@@ -52,6 +53,8 @@ var hoverMouse = function ($el) {
                     hover = false;
                 }
             });
+
+
         };
 
         var onHover = function (x, y) {
@@ -63,6 +66,7 @@ var hoverMouse = function ($el) {
                 ease: Power2.easeOut
             });
         };
+
         var onLeave = function () {
             TweenMax.to($self, 0.7, {
                 x: 0,
@@ -74,7 +78,32 @@ var hoverMouse = function ($el) {
         };
 
         attachEventsListener();
+
     });
 };
 
 hoverMouse($('.magnet'));
+
+
+// var magnets = document.querySelectorAll('.magnet')
+// var strength = 75
+
+// magnets.forEach( (magnet) => {
+//   magnet.addEventListener('mousemove', moveMagnet );
+//   magnet.addEventListener('mouseout', function(event) {
+//     TweenMax.to( event.currentTarget, 1, {x: 0, y: 0, ease: Power4.easeOut})
+//   } );
+// });
+
+// function moveMagnet(event) {
+//   var magnetButton = event.currentTarget
+//   var bounding = magnetButton.getBoundingClientRect()
+
+//   //console.log(magnetButton, bounding)
+
+//   TweenMax.to( magnetButton, 1, {
+//     x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * strength,
+//     y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * strength,
+//     ease: Power4.easeOut
+//   })
+// }

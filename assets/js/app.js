@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let direction = 1; // 1 = forward, -1 = backward scroll
+let direction = 1;
 
 const roll1 = roll(".rollingText", {
         duration: 25
@@ -20,7 +20,6 @@ const roll1 = roll(".rollingText", {
         }
     });
 
-// helper function that clones the targets, places them next to the original, then animates the xPercent in a loop to make it appear to roll across the screen in a seamless loop.
 function roll(targets, vars, reverse) {
     vars = vars || {};
     vars.ease || (vars.ease = "none");
@@ -55,3 +54,45 @@ function roll(targets, vars, reverse) {
     });
     return tl;
 }
+
+
+const effect_button = document.querySelectorAll('.effect_button');
+
+effect_button.forEach((item, index) => {
+    let inside = item.querySelector('.effect_button_inside')
+
+    item.addEventListener('mouseover', () => {
+        gsap.to(inside, {
+            top: 0,
+            duration: .45,
+            ease : Power3.easeIn,
+        })
+    })
+
+    item.addEventListener('mouseout', () => {
+        let tl = new gsap.timeline({});
+
+        tl.to(inside, {
+            top: -100 + '%',
+            duration: .45,
+            ease : Power3.easeIn,
+
+        });
+
+        tl.set(inside, {
+            top: 100 + '%',
+            ease : Power3.easeIn,
+
+        })
+    })
+})
+
+const nav_toggle = document.querySelector('.nav_toggle');
+
+document.addEventListener('scroll', function () {
+    if (window.scrollY >= 850) {
+        nav_toggle.classList.add('displayed')
+    } else {
+        nav_toggle.classList.remove('displayed')
+    }
+})
