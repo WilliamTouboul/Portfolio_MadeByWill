@@ -412,6 +412,7 @@ section {
   list-style: none;
 }
 .home_works ul li {
+  cursor: pointer;
   display: grid;
   grid-template-columns: 3fr 1fr;
   border-top: 1px #999D9E solid;
@@ -433,9 +434,138 @@ section {
   border-bottom: 1px #999D9E solid;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   Gallery                                  */
-/* -------------------------------------------------------------------------- */
+.side_gallery {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.side_gallery .row_item {
+  flex-shrink: 0;
+  min-width: 21vw;
+  background-color: #999D9E;
+  aspect-ratio: 1683/1352;
+}
+.side_gallery .row_1 {
+  overflow: hidden;
+  margin-bottom: 44px;
+  overflow-x: hidden;
+}
+.side_gallery .row_1 .inner {
+  display: flex;
+  gap: 4vw;
+}
+.side_gallery .row_1 .inner .row_item {
+  background-size: cover;
+  background-position: center center;
+}
+.side_gallery .row_1 .inner .row_item:first-child {
+  background-image: url("../images/projects/1.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(2) {
+  background-image: url("../images/projects/2.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(3) {
+  background-image: url("../images/projects/3.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(4) {
+  background-image: url("../images/projects/4.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(5) {
+  background-image: url("../images/projects/5.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(6) {
+  background-image: url("../images/projects/6.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(7) {
+  background-image: url("../images/projects/7.jpg");
+}
+.side_gallery .row_1 .inner .row_item:nth-child(8) {
+  background-image: url("../images/projects/8.jpg");
+}
+.side_gallery .row_2 {
+  display: flex;
+  gap: 4vw;
+  overflow: hidden;
+  justify-content: end;
+  margin-bottom: 44px;
+}
+.side_gallery .row_2 .inner {
+  display: flex;
+  gap: 4vw;
+  align-self: end;
+}
+.side_gallery .row_2 .inner .row_item {
+  background-size: cover;
+  background-position: center center;
+}
+.side_gallery .row_2 .inner .row_item:first-child {
+  background-image: url("../images/projects/3.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(2) {
+  background-image: url("../images/projects/6.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(3) {
+  background-image: url("../images/projects/9.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(4) {
+  background-image: url("../images/projects/2.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(5) {
+  background-image: url("../images/projects/12.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(6) {
+  background-image: url("../images/projects/1.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(7) {
+  background-image: url("../images/projects/7.jpg");
+}
+.side_gallery .row_2 .inner .row_item:nth-child(8) {
+  background-image: url("../images/projects/10jpg");
+}
+.side_gallery .row_3 {
+  display: flex;
+  gap: 4vw;
+  overflow: hidden;
+  margin-bottom: 44px;
+}
+.side_gallery .row_3 .inner {
+  display: flex;
+  gap: 4vw;
+}
+.side_gallery .row_3 .inner .row_item {
+  background-size: cover;
+  background-position: center center;
+}
+.side_gallery .row_3 .inner .row_item:first-child {
+  background-image: url("../images/projects/9.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(2) {
+  background-image: url("../images/projects/10.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(3) {
+  background-image: url("../images/projects/11.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(4) {
+  background-image: url("../images/projects/1.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(5) {
+  background-image: url("../images/projects/13.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(6) {
+  background-image: url("../images/projects/5.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(7) {
+  background-image: url("../images/projects/2.jpg");
+}
+.side_gallery .row_3 .inner .row_item:nth-child(8) {
+  background-image: url("../images/projects/1.jpg");
+}
+
+footer {
+  min-height: 100vh;
+  background-color: #181C1F;
+}
+
 /* --------------------------------- Button --------------------------------- */
 .about_button {
   height: 188px;
