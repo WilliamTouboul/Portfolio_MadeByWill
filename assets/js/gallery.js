@@ -43,7 +43,6 @@ const inner2 = document.querySelector('.inner_2');
 const inner3 = document.querySelector('.inner_3');
 const innerWidth = inner1.offsetWidth;
 
-console.log(innerWidth)
 gsap.to(inner1, {
     scrollTrigger: {
         trigger: row1,

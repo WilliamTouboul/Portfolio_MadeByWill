@@ -65,7 +65,7 @@ effect_button.forEach((item, index) => {
         gsap.to(inside, {
             top: 0,
             duration: .45,
-            ease : Power3.easeIn,
+            ease: Power3.easeIn,
         })
     })
 
@@ -75,13 +75,13 @@ effect_button.forEach((item, index) => {
         tl.to(inside, {
             top: -100 + '%',
             duration: .45,
-            ease : Power3.easeIn,
+            ease: Power3.easeIn,
 
         });
 
         tl.set(inside, {
             top: 100 + '%',
-            ease : Power3.easeIn,
+            ease: Power3.easeIn,
 
         })
     })
@@ -96,3 +96,18 @@ document.addEventListener('scroll', function () {
         nav_toggle.classList.remove('displayed')
     }
 })
+
+
+const datetime_target = document.querySelector('.datetime_target');
+
+function getHour() {
+    const date = new Date();
+    let hour = date.getHours();
+    let minute = '0' + date.getMinutes();
+    let second = date.getSeconds();
+    let time = hour + ':' + minute + ':' + second;
+    datetime_target.innerHTML = time;
+}
+
+getHour();
+setInterval(getHour, 1000);
