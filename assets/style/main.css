@@ -20,6 +20,7 @@
 body {
   min-height: 300vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -50,12 +51,15 @@ p {
 .nav {
   min-height: 90px;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
   align-items: center;
   padding-left: 3vw;
   padding-right: 3vw;
   font-family: "machina";
-  background-color: #999D9E;
   font-size: 18px;
   color: #F5F9F9;
 }
@@ -65,7 +69,6 @@ p {
 .nav .brand a {
   display: flex;
   gap: 6px;
-  font-weight: 600 !important;
   text-decoration: none;
   color: #F5F9F9;
   transition: color 0.16s ease-out;
@@ -123,7 +126,6 @@ p {
 
 .hero_container {
   overflow: hidden;
-  background-color: #999D9E;
   height: 100vh;
 }
 .hero_container .row {
@@ -307,7 +309,6 @@ section {
   font-family: "machina";
 }
 
-/* ------------------------------- Home About ------------------------------- */
 .home_about {
   min-height: 85vh;
   gap: 10%;
@@ -339,6 +340,12 @@ section {
 @media only screen and (max-width: 1025px) {
   .home_about .right p {
     font-size: 16px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .home_about .right p {
+    font-size: 12px;
+    text-align: justify;
   }
 }
 
@@ -423,7 +430,20 @@ section {
 .home_skills .skill_grid div ul li:nth-child(7):after {
   animation-delay: 2.8s;
 }
+@media only screen and (max-width: 769px) {
+  .home_skills .skill_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .home_skills .skill_grid ul {
+    margin-bottom: 88px;
+  }
+}
 
+@media only screen and (max-width: 1025px) {
+  .home_works {
+    display: none;
+  }
+}
 .home_works h3 {
   margin-bottom: 22px;
   font-family: "machina_thin";
@@ -541,7 +561,7 @@ section {
   background-image: url("../images/projects/7.jpg");
 }
 .side_gallery .row_2 .inner .row_item:nth-child(8) {
-  background-image: url("../images/projects/10jpg");
+  background-image: url("../images/projects/10.jpg");
 }
 .side_gallery .row_3 {
   display: flex;
@@ -581,6 +601,11 @@ section {
 .side_gallery .row_3 .inner .row_item:nth-child(8) {
   background-image: url("../images/projects/1.jpg");
 }
+@media only screen and (max-width: 1025px) {
+  .side_gallery .row_3 {
+    display: none;
+  }
+}
 
 .footer {
   height: 101vh;
@@ -617,6 +642,11 @@ section {
   transform: translateY(-50%);
   z-index: 0;
 }
+@media only screen and (max-width: 1025px) {
+  .footer .inner .button_container {
+    margin-top: 44px;
+  }
+}
 .footer .inner .footer_bot {
   display: flex;
   flex-direction: row;
@@ -630,10 +660,23 @@ section {
   padding: 16px 32px;
   border-radius: 88px;
   margin-right: 44px;
+  position: relative;
 }
 .footer .inner .footer_bot .mail_button p,
 .footer .inner .footer_bot .phone_button p {
   font-size: 16px;
+}
+@media only screen and (max-width: 769px) {
+  .footer .inner .footer_bot .mail_button,
+  .footer .inner .footer_bot .phone_button {
+    margin-right: 11px !important;
+    padding: 11px 22px !important;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .footer .inner .footer_bot {
+    margin-top: 88px;
+  }
 }
 .footer .outer_bottom {
   position: absolute;
@@ -686,8 +729,13 @@ section {
 .footer .outer_bottom .right .footer_elem ul li {
   margin-right: 22px;
 }
+@media only screen and (max-width: 1025px) {
+  .footer {
+    height: 94vh;
+    padding-top: 88px;
+  }
+}
 
-/* --------------------------------- Button --------------------------------- */
 .about_button {
   height: 188px;
   width: 188px;
@@ -696,6 +744,12 @@ section {
 }
 .about_button div {
   color: #F5F9F9;
+}
+@media only screen and (max-width: 1025px) {
+  .about_button {
+    height: 140px;
+    width: 140px;
+  }
 }
 
 .effect_button {
@@ -832,6 +886,16 @@ section {
   transition: color 1s ease-in;
   color: #455CE8;
 }
+@media only screen and (max-width: 1025px) {
+  .button_contact_footer {
+    height: 140px;
+    width: 140px;
+    margin-right: 6vw;
+  }
+  .button_contact_footer p {
+    font-size: 16px;
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                  Keyframes                                 */
@@ -914,4 +978,56 @@ section {
   100% {
     background-color: #181C1F;
   }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* --------------------------------- Topo 1 --------------------------------- */
+svg#topographic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 101vh;
+  width: 100vw;
+  background-color: #999D9E;
+  pointer-events: none;
+  z-index: -1;
+}
+
+svg#topographic path {
+  fill: #181C1F;
+  stroke-width: 1;
+  stroke-miterlimit: 0;
+  stroke: #455CE8;
+  opacity: 0.5;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 1000;
+  animation: dash 10s linear forwards infinite;
+  pointer-events: none;
+}
+
+/* --------------------------------- Topo 2 --------------------------------- */
+svg#topographic_2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 105vw;
+  height: 25vh;
+  pointer-events: none;
+}
+
+svg#topographic_2 path {
+  fill: #999D9E;
+  stroke-width: 1;
+  stroke-miterlimit: 0;
+  stroke: #F5F9F9;
+  opacity: 0.25;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 1000;
+  animation: dash 10s linear alternate infinite;
 }/*# sourceMappingURL=main.css.map */

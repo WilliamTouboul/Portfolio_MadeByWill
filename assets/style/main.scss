@@ -12,7 +12,8 @@ $spacer1 : 3vw;
 
 body {
     min-height: 300vh;
-    overflow-x: hidden // cursor: none;
+    overflow-x: hidden; // cursor: none;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -43,12 +44,15 @@ p {
 .nav {
     min-height: 90px;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: space-between;
     align-items: center;
     padding-left: $spacer1;
     padding-right: $spacer1;
     font-family: 'machina';
-    background-color: $grey_1;
     font-size: 18px;
     color: $white;
 
@@ -56,13 +60,9 @@ p {
         letter-spacing: -1px;
     }
 
-
     .brand a {
         display: flex;
         gap: 6px;
-
-
-        font-weight: 600 !important;
         text-decoration: none;
         color: $white;
         transition: color .16s ease-out;
@@ -137,8 +137,8 @@ p {
 
 .hero_container {
     overflow: hidden;
-    background-color: $grey_1;
     height: 100vh;
+    
 
 
     .row {
@@ -346,7 +346,6 @@ section {
     font-family: 'machina';
 }
 
-/* ------------------------------- Home About ------------------------------- */
 .home_about {
     min-height: 85vh;
     gap: 10%;
@@ -376,8 +375,14 @@ section {
             text-align: left;
             font-family: 'machina_thin';
 
+
             @media only screen and (max-width: 1025px) {
                 font-size: 16px;
+            }
+
+            @media only screen and (max-width: 769px) {
+                font-size: 12px;
+                text-align: justify;
             }
         }
     }
@@ -479,10 +484,25 @@ section {
                 }
             }
         }
+
+
+        @media only screen and (max-width: 769px) {
+            grid-template-columns: 1fr 1fr;
+
+            ul {
+                margin-bottom: 88px;
+            }
+        }
+
+
     }
 }
 
 .home_works {
+    @media only screen and (max-width: 1025px) {
+        display: none;
+    }
+
     h3 {
         margin-bottom: 22px;
         font-family: 'machina_thin';
@@ -629,7 +649,7 @@ section {
                 }
 
                 &:nth-child(8) {
-                    background-image: url('../images/projects/10jpg')
+                    background-image: url('../images/projects/10.jpg')
                 }
             }
 
@@ -684,6 +704,10 @@ section {
             }
 
         }
+
+        @media only screen and (max-width: 1025px) {
+            display: none;
+        }
     }
 }
 
@@ -694,7 +718,6 @@ section {
     background-color: $grey_2;
     color: $white;
     position: relative;
-
 
     .inner {
         display: flex;
@@ -711,7 +734,6 @@ section {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-
             position: relative;
 
             &:after {
@@ -724,6 +746,10 @@ section {
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 0;
+            }
+
+            @media only screen and (max-width: 1025px) {
+                margin-top: 44px;
             }
         }
 
@@ -740,12 +766,26 @@ section {
                 padding: 16px 32px;
                 border-radius: 88px;
                 margin-right: 44px;
+                position: relative;
 
                 p {
                     font-size: 16px;
                 }
+
+
+                @media only screen and (max-width: 769px) {
+                    margin-right: 11px !important;
+                    padding: 11px 22px !important;
+                }
+
+            }
+
+            @media only screen and (max-width:769px) {
+                margin-top: 88px;
             }
         }
+
+
     }
 
     .outer_bottom {
@@ -800,9 +840,13 @@ section {
             }
         }
     }
+
+    @media only screen and (max-width: 1025px) {
+        height: 94vh;
+        padding-top: 88px
+    }
 }
 
-/* --------------------------------- Button --------------------------------- */
 
 .about_button {
     height: 188px;
@@ -812,6 +856,11 @@ section {
 
     div {
         color: $white;
+    }
+
+    @media only screen and (max-width: 1025px) {
+        height: 140px;
+        width: 140px;
     }
 }
 
@@ -966,6 +1015,18 @@ section {
         transition: color 1s ease-in;
         color: $accent;
     }
+
+
+    @media only screen and (max-width: 1025px) {
+        height: 140px;
+        width: 140px;
+        margin-right: 6vw;
+
+        p {
+            font-size: 16px;
+        }
+
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1069,4 +1130,59 @@ section {
         background-color: $grey_2;
 
     }
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 2500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+/* --------------------------------- Topo 1 --------------------------------- */
+svg#topographic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 101vh;
+    width: 100vw;
+    background-color: $grey_1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+svg#topographic path {
+    fill: $grey_2;
+    stroke-width: 1;
+    stroke-miterlimit: 0;
+    stroke: $accent;
+    opacity: .5;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 1000;
+    animation: dash 10s linear forwards infinite;
+    pointer-events: none;
+}
+
+
+/* --------------------------------- Topo 2 --------------------------------- */
+svg#topographic_2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 105vw;
+    height: 25vh;
+    pointer-events: none;
+}
+
+svg#topographic_2 path {
+    fill: $grey_1;
+    stroke-width: 1;
+    stroke-miterlimit: 0;
+    stroke: $white;
+    opacity: .25;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 1000;
+    animation: dash 10s linear alternate infinite;
 }
