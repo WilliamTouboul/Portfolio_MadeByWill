@@ -55,6 +55,7 @@ p {
     font-family: 'machina';
     font-size: 18px;
     color: $white;
+    z-index: 2;
 
     * {
         letter-spacing: -1px;
@@ -138,8 +139,8 @@ p {
 .hero_container {
     overflow: hidden;
     height: 100vh;
-    
-
+    max-height: 100vh;
+    position: relative;
 
     .row {
         width: 100%;
@@ -499,6 +500,7 @@ section {
 }
 
 .home_works {
+    padding-top: 0;
     @media only screen and (max-width: 1025px) {
         display: none;
     }
@@ -718,6 +720,8 @@ section {
     background-color: $grey_2;
     color: $white;
     position: relative;
+    overflow: hidden;
+
 
     .inner {
         display: flex;
@@ -1141,48 +1145,60 @@ section {
         stroke-dashoffset: 0;
     }
 }
+
 /* --------------------------------- Topo 1 --------------------------------- */
 svg#topographic {
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 101vh;
     width: 100vw;
+    height: 166vh;
+    z-index: -1;
     background-color: $grey_1;
     pointer-events: none;
-    z-index: -1;
+
+    path {
+        fill: #999D9E;
+        stroke-width: 1;
+        stroke-miterlimit: 0;
+        stroke: lighten(#999D9E, 10%);
+        stroke-dasharray: 500;
+        stroke-dashoffset: 1000;
+        animation: dash 10s linear forwards infinite;
+    }
+
+    path {
+        fill: #999D9E;
+    }
 }
 
-svg#topographic path {
-    fill: $grey_2;
-    stroke-width: 1;
-    stroke-miterlimit: 0;
-    stroke: $accent;
-    opacity: .5;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 1000;
-    animation: dash 10s linear forwards infinite;
-    pointer-events: none;
-}
+
 
 
 /* --------------------------------- Topo 2 --------------------------------- */
-svg#topographic_2 {
+.line_container {
+    height: 27vh;
+    width: 100%;
     position: absolute;
-    left: 0;
     top: 0;
-    width: 105vw;
-    height: 25vh;
-    pointer-events: none;
+    left: 0;
+    overflow: hidden;
 }
 
-svg#topographic_2 path {
-    fill: $grey_1;
-    stroke-width: 1;
-    stroke-miterlimit: 0;
-    stroke: $white;
-    opacity: .25;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 1000;
-    animation: dash 10s linear alternate infinite;
+svg#topographic_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 160vh;
+    margin-top: -50vh;
+
+    path {
+        fill: $grey_1;
+        stroke-width: 1;
+        stroke-miterlimit: 0;
+        stroke: $white;
+        opacity: .25;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 1000;
+        animation: dash 10s linear alternate infinite;
+    }
 }
