@@ -166,6 +166,12 @@ p {
   height: 75%;
   cursor: pointer;
 }
+@media only screen and (max-width: 769px) {
+  .hero_container .row {
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+}
 .hero_container .globe {
   position: absolute;
   top: 50%;
@@ -269,6 +275,11 @@ p {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media only screen and (max-width: 769px) {
+  .wrapperRollingText {
+    font-size: 20vw;
+  }
 }
 
 .rollingText {
@@ -621,6 +632,11 @@ section {
   color: #F5F9F9;
   position: relative;
   overflow: hidden;
+}
+@media only screen and (max-width: 769px) {
+  .footer {
+    max-height: 65vh;
+  }
 }
 .footer .inner {
   display: flex;
@@ -988,7 +1004,7 @@ section {
 }
 @keyframes dash {
   from {
-    stroke-dashoffset: 2500;
+    stroke-dashoffset: 4000;
   }
   to {
     stroke-dashoffset: 0;
@@ -1003,6 +1019,11 @@ svg#topographic {
   background-color: #999D9E;
   pointer-events: none;
 }
+@media only screen and (max-width: 769px) {
+  svg#topographic {
+    width: 150vw;
+  }
+}
 svg#topographic path {
   fill: #999D9E;
   stroke-width: 1;
@@ -1010,7 +1031,12 @@ svg#topographic path {
   stroke: #b3b6b7;
   stroke-dasharray: 500;
   stroke-dashoffset: 1000;
-  animation: dash 10s linear forwards infinite;
+  animation: dash 15s linear forwards infinite;
+}
+@media only screen and (max-width: 769px) {
+  svg#topographic path {
+    stroke-width: 2;
+  }
 }
 svg#topographic path {
   fill: #999D9E;
@@ -1025,6 +1051,11 @@ svg#topographic path {
   left: 0;
   overflow: hidden;
 }
+@media only screen and (max-width: 769px) {
+  .line_container {
+    height: 14vh;
+  }
+}
 
 svg#topographic_2 {
   position: absolute;
@@ -1034,8 +1065,13 @@ svg#topographic_2 {
   height: 160vh;
   margin-top: -50vh;
 }
+@media only screen and (max-width: 769px) {
+  svg#topographic_2 {
+    width: 150vw;
+  }
+}
 svg#topographic_2 path {
-  fill: #999D9E;
+  fill: #181C1F;
   stroke-width: 1;
   stroke-miterlimit: 0;
   stroke: #F5F9F9;
@@ -1043,4 +1079,9 @@ svg#topographic_2 path {
   stroke-dasharray: 500;
   stroke-dashoffset: 1000;
   animation: dash 10s linear alternate infinite;
+}
+@media only screen and (max-width: 769px) {
+  svg#topographic_2 path {
+    stroke-width: 2;
+  }
 }/*# sourceMappingURL=main.css.map */

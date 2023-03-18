@@ -181,6 +181,12 @@ p {
                 cursor: pointer;
             }
         }
+
+        @media only screen and (max-width: 769px) {
+            margin-top: 50%;
+            transform: translateY(-50%)
+        }
+
     }
 
 
@@ -303,6 +309,11 @@ p {
     bottom: 0;
     color: $white;
     user-select: none;
+
+
+    @media only screen and (max-width: 769px) {
+        font-size: 20vw;
+    }
 }
 
 .rollingText {
@@ -315,7 +326,6 @@ p {
     top: 20vh;
     height: 50vh;
     width: 100px;
-
 }
 
 .half {
@@ -501,6 +511,7 @@ section {
 
 .home_works {
     padding-top: 0;
+
     @media only screen and (max-width: 1025px) {
         display: none;
     }
@@ -722,6 +733,9 @@ section {
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: 769px) {
+        max-height: 65vh;
+    }
 
     .inner {
         display: flex;
@@ -850,7 +864,6 @@ section {
         padding-top: 88px
     }
 }
-
 
 .about_button {
     height: 188px;
@@ -1138,7 +1151,7 @@ section {
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 2500;
+        stroke-dashoffset: 4000;
     }
 
     to {
@@ -1155,6 +1168,10 @@ svg#topographic {
     background-color: $grey_1;
     pointer-events: none;
 
+    @media only screen and (max-width: 769px) {
+        width: 150vw;
+    }
+
     path {
         fill: #999D9E;
         stroke-width: 1;
@@ -1162,7 +1179,12 @@ svg#topographic {
         stroke: lighten(#999D9E, 10%);
         stroke-dasharray: 500;
         stroke-dashoffset: 1000;
-        animation: dash 10s linear forwards infinite;
+        animation: dash 15s linear forwards infinite;
+
+        @media only screen and (max-width: 769px) {
+            stroke-width: 2;
+
+        }
     }
 
     path {
@@ -1181,6 +1203,10 @@ svg#topographic {
     top: 0;
     left: 0;
     overflow: hidden;
+
+    @media only screen and (max-width: 769px) {
+        height: 14vh;
+    }
 }
 
 svg#topographic_2 {
@@ -1191,8 +1217,12 @@ svg#topographic_2 {
     height: 160vh;
     margin-top: -50vh;
 
+    @media only screen and (max-width: 769px) {
+        width: 150vw;
+    }
+
     path {
-        fill: $grey_1;
+        fill: $grey_2;
         stroke-width: 1;
         stroke-miterlimit: 0;
         stroke: $white;
@@ -1200,5 +1230,11 @@ svg#topographic_2 {
         stroke-dasharray: 500;
         stroke-dashoffset: 1000;
         animation: dash 10s linear alternate infinite;
+
+        @media only screen and (max-width: 769px) {
+
+            stroke-width: 2;
+
+        }
     }
 }
