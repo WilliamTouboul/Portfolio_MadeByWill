@@ -1,14 +1,10 @@
-gsap.registerPlugin(ScrollTrigger);
-
-let direction = 1;
-
 const roll1 = roll(".rollingText", {
         duration: 25
     }),
     roll2 = roll(".rollingText02", {
         duration: 10
     }, true),
-    scroll = ScrollTrigger.create({
+    scroller = ScrollTrigger.create({
         onUpdate(self) {
             if (self.direction !== direction) {
                 direction *= -1;
@@ -55,6 +51,8 @@ function roll(targets, vars, reverse) {
     return tl;
 }
 
+let direction = 1;
+
 
 const effect_button = document.querySelectorAll('.effect_button');
 
@@ -87,27 +85,19 @@ effect_button.forEach((item, index) => {
     })
 })
 
-const nav_toggle = document.querySelector('.nav_toggle');
 
-document.addEventListener('scroll', function () {
-    if (window.scrollY >= 850) {
-        nav_toggle.classList.add('displayed')
-    } else {
-        nav_toggle.classList.remove('displayed')
-    }
-})
+function displayTime() {
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
 
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
 
-const datetime_target = document.querySelector('.datetime_target');
-
-function getHour() {
-    const date = new Date();
-    let hour = date.getHours();
-    let minute = '0' + date.getMinutes();
-    let second = date.getSeconds();
-    let time = hour + ':' + minute + ':' + second;
-    datetime_target.innerHTML = time;
+    var time = h + ":" + m + ":" + s;
+    document.querySelector(".datetime_target").innerText = time;
 }
 
-getHour();
-setInterval(getHour, 1000);
+setInterval(displayTime, 1000);

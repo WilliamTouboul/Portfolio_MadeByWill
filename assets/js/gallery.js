@@ -12,6 +12,7 @@ const project = document.querySelectorAll('.project_item');
 project.forEach((item, index) => {
 
     item.addEventListener('mouseover', () => {
+        console.log(viewer.style.top)
         let source = item.getAttribute('data-img');
         viewer.style.backgroundImage = `url('${source}')`
         gsap.to(viewer, {
@@ -32,48 +33,3 @@ project.forEach((item, index) => {
     });
 
 })
-
-
-const side = document.querySelector('.side_gallery');
-const row1 = document.querySelector('.row_1');
-const row2 = document.querySelector('.row_2');
-const row3 = document.querySelector('.row_3');
-const inner1 = document.querySelector('.inner_1');
-const inner2 = document.querySelector('.inner_2');
-const inner3 = document.querySelector('.inner_3');
-const innerWidth = inner1.offsetWidth;
-
-gsap.to(inner1, {
-    scrollTrigger: {
-        trigger: row1,
-        start: 'top 98%',
-        end: 'top -100%',
-        scrub: true,
-    },
-    x: -innerWidth,
-    easing : Power3.easeIn,
-});
-
-gsap.to(inner2, {
-    scrollTrigger: {
-        trigger: row2,
-        start: 'top 98%',
-        end: 'top -100%',
-        scrub: true,
-    },
-    x: innerWidth,
-    easing : Power3.easeIn,
-
-});
-
-gsap.to(inner3, {
-    scrollTrigger: {
-        trigger: row3,
-        start: 'top 98%',
-        end: 'top -100%',
-        scrub: true,
-    },
-    x: -innerWidth,
-    easing : Power3.easeIn,
-
-});

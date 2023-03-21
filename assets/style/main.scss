@@ -10,6 +10,11 @@ $spacer1 : 3vw;
     font-weight: 400;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 300vh;
     overflow-x: hidden; // cursor: none;
@@ -133,6 +138,10 @@ p {
                 }
             }
         }
+
+        @media only screen and (max-width: 769px) {
+            display: none;
+        }
     }
 }
 
@@ -150,6 +159,7 @@ p {
         align-items: flex-end;
         padding-right: 10vw;
 
+
         .location {
             background-color: $grey_2;
             min-width: 250px;
@@ -166,7 +176,6 @@ p {
             p {
                 font-family: 'machina';
                 color: $white;
-
             }
 
             .globe_container {
@@ -180,6 +189,13 @@ p {
                 height: 75%;
                 cursor: pointer;
             }
+
+            @media only screen and (max-width: 769px) {
+                padding-right: 2%;
+            }
+
+
+
         }
 
         @media only screen and (max-width: 769px) {
@@ -187,9 +203,28 @@ p {
             transform: translateY(-50%)
         }
 
+        @media only screen and (max-width: 706px) {
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+            align-items: start;
+            justify-content: start;
+            flex-direction: row;
+            padding-left: 22px;
+
+            svg {
+                display: none;
+            }
+
+            .location {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 426px) {
+            bottom: 0;
+        }
     }
-
-
 
     .globe {
         position: absolute;
@@ -203,7 +238,6 @@ p {
         overflow: hidden;
         will-change: transform;
     }
-
 
     .globe_wrap {
         top: 50%;
@@ -231,8 +265,6 @@ p {
         animation: circle1 2.7s linear infinite;
         font-size: .75em;
     }
-
-
 
     .globe :nth-child(1) {
         animation-delay: -1.8s;
@@ -298,6 +330,10 @@ p {
         @media only screen and (max-width: 1025px) {
             font-size: 33px;
         }
+
+        @media only screen and (max-width: 426px) {
+            font-size: 33px;
+        }
     }
 }
 
@@ -313,6 +349,11 @@ p {
 
     @media only screen and (max-width: 769px) {
         font-size: 20vw;
+    }
+
+    @media only screen and (max-width: 426px) {
+        font-size: 30vw;
+        top: 60%;
     }
 }
 
@@ -397,6 +438,34 @@ section {
             }
         }
     }
+
+
+
+    @media only screen and (max-width: 426px) {
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+        }
+
+        .right {
+            margin-top: 22px;
+            width: 100%;
+
+            p {
+                font-size: 22px;
+                margin-bottom: 22px;
+
+                @media only screen and (max-width : 426px) {
+                    padding-bottom: 88px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : 1025px) {
+        min-height: 72vh
+    }
 }
 
 .home_approche {
@@ -458,10 +527,11 @@ section {
                         height: 11px;
                         width: 11px;
                         background-color: $grey_2;
-                        animation: dot_color 2.4s forwards infinite;
+                        transition: all .12s ease-out;
                         top: 0;
                         left: 0;
                         border-radius: 50%;
+
                     }
 
                     &:first-child:after {
@@ -492,12 +562,19 @@ section {
                         animation-delay: 2.8s
                     }
 
+
+                    &:hover {
+                        &:after {
+                            background-color: $accent;
+                        }
+                    }
+
+
                 }
             }
         }
 
-
-        @media only screen and (max-width: 769px) {
+        @media only screen and (max-width: 1025px) {
             grid-template-columns: 1fr 1fr;
 
             ul {
@@ -506,6 +583,62 @@ section {
         }
 
 
+        @media only screen and (max-width: 426px) {
+            grid-template-columns: 1fr;
+
+            ul {
+                margin-bottom: 22px;
+            }
+        }
+
+
+
+    }
+}
+
+.home_services {
+    padding-top: 0;
+
+    h3 {
+        margin-bottom: 22px;
+        font-family: 'machina_thin';
+        color: $grey_1;
+    }
+
+    .services_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .ico {
+            height: 44px;
+            width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+
+        h4 {
+            margin-bottom: 22px;
+        }
+
+        p {
+            font-size: 22px;
+            width: 80%;
+            font-family: 'machina_thin';
+        }
+
+        @media only screen and (max-width: 769px) {
+            grid-template-columns: 1fr;
+
+            &>div {
+                margin-top: 88px;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -558,6 +691,10 @@ section {
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+
+    @media only screen and (max-width: 426px) {
+        display: none;
+    }
 
 
     .row_item {
@@ -734,7 +871,7 @@ section {
     overflow: hidden;
 
     @media only screen and (max-width: 769px) {
-        max-height: 65vh;
+        max-height: 80vh;
     }
 
     .inner {
@@ -801,6 +938,14 @@ section {
             @media only screen and (max-width:769px) {
                 margin-top: 88px;
             }
+
+            @media only screen and (max-width: 726px) {
+                flex-direction: column;
+
+                .mail_button{
+                    margin-bottom: 44px;
+                }
+            }
         }
 
 
@@ -853,6 +998,15 @@ section {
 
                     li {
                         margin-right: 22px;
+
+                        a {
+                            color: $grey_1;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $accent;
+                            }
+                        }
                     }
                 }
             }
@@ -992,10 +1146,17 @@ section {
     background-position: center center;
     background-size: cover;
     z-index: 999999;
+
+    @media only screen and (max-width: 426px) {
+        display: none;
+    }
 }
 
 .mail_button,
 .phone_button {
+    text-decoration: none;
+    color: $white;
+
     .ico {
         height: auto;
     }
@@ -1172,6 +1333,11 @@ svg#topographic {
         width: 150vw;
     }
 
+    @media only screen and (max-width: 426px) {
+        width: 200vw;
+        margin-left: -15vw;
+    }
+
     path {
         fill: #999D9E;
         stroke-width: 1;
@@ -1183,8 +1349,9 @@ svg#topographic {
 
         @media only screen and (max-width: 769px) {
             stroke-width: 2;
-
         }
+
+
     }
 
     path {
@@ -1192,12 +1359,9 @@ svg#topographic {
     }
 }
 
-
-
-
 /* --------------------------------- Topo 2 --------------------------------- */
 .line_container {
-    height: 27vh;
+    height: 25vh;
     width: 100%;
     position: absolute;
     top: 0;
