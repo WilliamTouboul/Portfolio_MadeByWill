@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Touboul</title>
     <link rel="stylesheet" href="assets/style/main.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/icons/whiteCircle.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/orbtopo.svg">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
@@ -15,19 +15,57 @@
 </head>
 
 <body>
+    <!-- Out of main for scroll purpose -->
     <div class="gallery_viewer no-scroll" data-scroll="false">
     </div>
 
+    <div class="nav_toggle effect_button magnet">
+        <div class="ico magnet">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="effect_button_inside"></div>
+    </div>
+
+    <div class="nav_side">
+        <div class="title">
+            © MadeByWill
+        </div>
+        <ul class="menu_inner">
+            <li>
+                <a href="works.html">
+                    Réalisations
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    A propos
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="side_rs">
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">Dribbble</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
 
     <main class="big_container" data-scroll-container>
-
-        <div class="nav_toggle effect_button magnet">
-            <div class="ico magnet">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect_button_inside"></div>
-        </div>
 
         <nav class="nav">
             <div class="brand magnet">
@@ -38,7 +76,7 @@
 
             <div class="navbar">
                 <div class="nav_item magnet">
-                    <a href="#">Réalisations</a>
+                    <a href="works.html">Réalisations</a>
                     <div class="point"></div>
                 </div>
                 <div class="nav_item magnet">
@@ -734,26 +772,34 @@
         <section class="home_about" data-scroll>
             <div class="left">
                 <h2>
-                    Ensemble, nous travaillerons pour aider votre marque a briller en établissant de nouveaux
-                    standards. Nous serons constamment a la pointe sans perdre de temps pour vous amener un service
-                    optimal.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sit earum dignissimos sunt assumenda
-                    similique numquam, necessitatibus quibusdam provident unde, hic ipsam. Dolores magni earum odio
-                    placeat ab ducimus deleniti!
+                    Ensemble, nous unirons nos forces pour propulser votre marque au sommet en instaurant de nouveaux
+                    standards de qualité. Grâce à mon engagement envers l'excellence, je m'efforcerai de
+                    rester à la pointe de l'innovation pour vous offrir un service inégalé. Mon expertise en matière de
+                    développement web full stack et de design me permettra de concevoir des solutions sur mesure qui
+                    répondent à vos besoins et dépassent vos attentes.
+
+                    Je suis convaincu que la clé du succès réside dans la collaboration et la communication efficace.
+                    C'est pourquoi je travaillerai en étroite collaboration avec vous à chaque étape du projet pour
+                    m'assurer que votre vision est réalisée avec brio. Je serai également attentif à vos commentaires et
+                    suggestions tout au long du processus afin d'assurer une transparence totale et une satisfaction
+                    maximale.
+
+                    
                 </h2>
             </div>
             <div class="right">
                 <p>
-                    La combinaison de mes passions pour le design, le code et la communication me place parfaitement
-                    pour
-                    vous apporter un savoir faire unique et complet.
+                    En choisissant de travailler avec moi, vous aurez l'assurance de bénéficier d'un service
+                    professionnel, personnalisé et hautement qualitatif. Mon engagement envers votre succès sera
+                    constant et indéfectible, et je serai fier de vous accompagner dans votre parcours vers l'excellence
+                    numérique.
                 </p>
-                <div class="about_button effect_button magnet">
+                <a href="about.html" class="about_button effect_button magnet">
                     <div class="ico text magnet">
-                        <p>A propos</p>
+                        <p style="color:#F5F9F9;">A propos</p>
                     </div>
                     <div class="effect_button_inside"></div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -815,8 +861,6 @@
             </div>
         </section>
 
-      
-
         <section class="home_works" data-scroll>
             <h3>Mes réalisations</h3>
 
@@ -851,12 +895,12 @@
 
 
 
-            <div class="effect_button more_works_button magnet">
+            <a href="works.html" class="effect_button more_works_button magnet">
                 <div class="ico magnet">
                     Plus de projets <span>12</span>
                 </div>
                 <div class="effect_button_inside"></div>
-            </div>
+            </a>
         </section>
 
         <section class="side_gallery" data-scroll>
@@ -1521,14 +1565,14 @@
                     Travaillons ensemble !
                 </div>
 
-                <div class="button_container">
+                <a href="contact.html" style="text-decoration:none;" class="button_container">
                     <div class="button_contact_footer effect_button magnet">
                         <div class="ico text magnet">
-                            <p>Dites moi tout</p>
+                            <p style="text-decoration:none;">Dites moi tout</p>
                         </div>
                         <div class="effect_button_inside"></div>
                     </div>
-                </div>
+                </a>
 
                 <div class="footer_bot">
                     <a class="mail_button effect_button magnet2" href="mailto:contact@williamtouboul.com">
@@ -1551,7 +1595,7 @@
                 <div class="left">
                     <div class="footer_elem">
                         <h5>Version</h5>
-                        <p>2023.3</p>
+                        <p style="color:#F5F9F9">2023.3</p>
                     </div>
                     <div class="footer_elem">
                         <h5>Heure local</h5>
@@ -1593,9 +1637,7 @@
     "></script>
     <script src="assets/js/scrolltriggereffect.js"></script>
     <script src="assets/js/app.js"></script>
-    <script>
-
-    </script>
+    <script src="assets/js/nav.js"></script>
 </body>
 
 </html>

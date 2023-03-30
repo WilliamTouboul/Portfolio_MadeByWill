@@ -4,6 +4,14 @@ scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     multiplier: 0.5,
+    getDirection: true,
+    getSpeed: true,
+    getHorizontalOffset: true,
+    getVerticalOffset: true,
+    scrollFromAnywhere: true,
+    smartphone: {
+        smooth: true,
+    },
 });
 
 window.onresize = scroll.update();
@@ -36,21 +44,8 @@ ScrollTrigger.addEventListener('refresh', () => scroll.update());
 ScrollTrigger.refresh();
 
 
+// ScrollTrigger Gallery Home.
 const skills = document.querySelector('.home_skills');
-
-// gsap.from(skills, {
-//     scrollTrigger: {
-//         trigger: skills,
-//         start: 'top 80%',
-//         end: 'top 20%',
-//         scrub: true
-//     },
-//     y: 220,
-//     opacity: 0
-// })
-
-
-// /* --------------------------------- Gallery -------------------------------- */
 
 const side = document.querySelector('.side_gallery');
 const row1 = document.querySelector('.row_1');
@@ -82,7 +77,6 @@ gsap.to(inner2, {
     },
     x: innerWidth,
     easing: Power3.easeIn,
-
 });
 
 gsap.to(inner3, {
@@ -94,5 +88,5 @@ gsap.to(inner3, {
     },
     x: -innerWidth,
     easing: Power3.easeIn,
-
 });
+

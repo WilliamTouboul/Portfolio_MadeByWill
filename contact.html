@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Touboul - Contact</title>
     <link rel="stylesheet" href="assets/style/main.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/icons/whiteCircle.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/orbtopo.svg">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
@@ -15,17 +15,50 @@
 </head>
 
 <body class="body_about body_contact">
+    <div class="nav_toggle effect_button magnet">
+        <div class="ico magnet">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="effect_button_inside"></div>
+    </div>
+
+    <div class="nav_side">
+        <div class="title">
+            © MadeByWill
+        </div>
+        <ul class="menu_inner">
+            <li>
+                <a href="works.html">
+                    Réalisations
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    A propos
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="side_rs">
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">Dribbble</a></li>
+            </ul>
+        </div>
+    </div>
+
+
 
     <main data-scroll-container>
-        
-        <div class="nav_toggle effect_button magnet">
-            <div class="ico magnet">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect_button_inside"></div>
-        </div>
-
         <nav class="nav">
             <div class="brand magnet">
                 <a href="index.html">
@@ -35,14 +68,14 @@
 
             <div class="navbar">
                 <div class="nav_item magnet">
-                    <a href="#">Réalisations</a>
+                    <a href="works.html">Réalisations</a>
                     <div class="point"></div>
                 </div>
                 <div class="nav_item magnet">
                     <a href="about.html">A propos</a>
                     <div class="point"></div>
                 </div>
-                <div class="nav_item magnet">
+                <div class="nav_item magnet active">
                     <a href="contact.html">Contact</a>
                     <div class="point"></div>
                 </div>
@@ -50,7 +83,7 @@
         </nav>
 
         <section style="padding-top:8vw;padding-bottom:0">
-            <h1>
+            <h1 style="color:#F5F9F9;">
                 Démarrons ensemble <br> votre projet !
             </h1>
         </section>
@@ -247,4 +280,6 @@
             })
         })
     </script>
+    <script src="assets/js/nav.js"></script>
+
 </body>

@@ -1,3 +1,4 @@
+// Rolling Text in Header.
 const roll1 = roll(".rollingText", {
         duration: 25
     }),
@@ -53,7 +54,7 @@ function roll(targets, vars, reverse) {
 
 let direction = 1;
 
-
+// Effect Button with Blue Circle.
 const effect_button = document.querySelectorAll('.effect_button');
 
 effect_button.forEach((item, index) => {
@@ -85,7 +86,7 @@ effect_button.forEach((item, index) => {
     })
 })
 
-
+// Display time in footer.
 function displayTime() {
     var date = new Date();
     var h = date.getHours();
