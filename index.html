@@ -92,7 +92,6 @@
         </nav>
 
         <div class="hero_container" data-scroll>
-
             <svg version="1.1" id="topographic" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1701.8 1663.2"
                 preserveAspectRatio="none" style="enable-background:new 0 0 1701.8 1663.2;">
@@ -784,7 +783,7 @@
                     suggestions tout au long du processus afin d'assurer une transparence totale et une satisfaction
                     maximale.
 
-                    
+
                 </h2>
             </div>
             <div class="right">
@@ -792,7 +791,7 @@
                     En choisissant de travailler avec moi, vous aurez l'assurance de bénéficier d'un service
                     professionnel, personnalisé et hautement qualitatif. Mon engagement envers votre succès sera
                     constant et indéfectible, et je serai fier de vous accompagner dans votre parcours vers l'excellence
-                    numérique.
+                    .
                 </p>
                 <a href="about.html" class="about_button effect_button magnet">
                     <div class="ico text magnet">
@@ -865,30 +864,24 @@
             <h3>Mes réalisations</h3>
 
             <ul>
-                <li data-scroll-id="hey" data-scroll data-target="" class="project_item"
-                    data-img="assets/images/projects/1.jpg">
-                    <h2>Comfort</h2>
+                <li data-target="works/runningman.html" class="project_item" data-img="assets/images/projects/11.jpg">
+                    <h2>Running Man</h2>
                     <p>Web Design, Branding</p>
                 </li>
 
-                <li data-scroll data-target="" class="project_item" data-img="assets/images/projects/2.jpg">
-                    <h2>The Shield Bearers</h2>
+                <li data-target="works/citylights.html" class="project_item" data-img="assets/images/projects/20.jpg">
+                    <h2>City Lights</h2>
                     <p>Web Design, Developpement</p>
                 </li>
 
-                <li data-scroll data-target="" class="project_item" data-img="assets/images/projects/3.jpg">
-                    <h2>Int.</h2>
+                <li data-target="works/tinyhouse.html" class="project_item" data-img="assets/images/projects/5.jpg">
+                    <h2>Tiny House</h2>
                     <p>Web Design, Branding</p>
                 </li>
 
-                <li data-scroll data-target="" class="project_item" data-img="assets/images/projects/4.jpg">
+                <li data-target="works/southbend.html" class="project_item" data-img="assets/images/projects/4.jpg">
                     <h2>South Bend Tattoo</h2>
                     <p>Web Design, Branding, Print</p>
-                </li>
-
-                <li data-scroll data-target="" class="project_item" data-img="assets/images/projects/5.jpg">
-                    <h2>TinyHouse</h2>
-                    <p>Web design, branding</p>
                 </li>
 
             </ul>
@@ -897,7 +890,7 @@
 
             <a href="works.html" class="effect_button more_works_button magnet">
                 <div class="ico magnet">
-                    Plus de projets <span>12</span>
+                    Plus de projets <span>6</span>
                 </div>
                 <div class="effect_button_inside"></div>
             </a>
@@ -1638,6 +1631,20 @@
     <script src="assets/js/scrolltriggereffect.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/nav.js"></script>
+
+    <script>
+        const proj_links = document.querySelectorAll('.project_item');
+        console.log(proj_links)
+
+        proj_links.forEach((item,index)=>{
+            item.addEventListener('click',()=>{
+                console.log('click')
+                let goto = item.getAttribute('data-target');
+                window.location.href = `${goto}`
+            })
+        });
+
+    </script>
 </body>
 
 </html>
