@@ -16,6 +16,10 @@
 
 <body>
     <!-- Out of main for scroll purpose -->
+    <div class="loader">
+        <p class="Hello">abc</p>
+    </div>
+
     <div class="gallery_viewer no-scroll" data-scroll="false">
     </div>
 
@@ -810,8 +814,7 @@
                 leur approche globale et leur engagement en faveur de l'éco-responsabilité. Ma méthode exhaustive couvre
                 toutes les étapes de la conception, depuis la planification jusqu'à la maintenance, afin de créer des
                 sites
-                web sur mesure répondant aux besoins de mes clients. Je suis également soucieux de l'environnement et
-                j'utilise des pratiques de développement éco-responsables pour minimiser mon impact environnemental.
+                web sur mesure répondant aux besoins de mes clients.
             </p>
         </section>
 
@@ -821,8 +824,9 @@
                 <div>
                     <h4>Branding</h4>
                     <ul>
-                        <li>Moodboard</li>
+                        <li>Image de marque</li>
                         <li>Stratégie de marque</li>
+                        <li>Moodboard</li>
                         <li>Réseaux sociaux</li>
                     </ul>
                 </div>
@@ -1636,14 +1640,41 @@
         const proj_links = document.querySelectorAll('.project_item');
         console.log(proj_links)
 
-        proj_links.forEach((item,index)=>{
-            item.addEventListener('click',()=>{
-                console.log('click')
+        proj_links.forEach((item, index) => {
+            item.addEventListener('click', () => {
                 let goto = item.getAttribute('data-target');
                 window.location.href = `${goto}`
             })
         });
+    </script>
 
+    <script>
+        const loader = document.querySelector('.loader');
+        const hello = document.querySelector('.Hello');
+
+        const helloArray = ['Hello', 'γεια', 'Hola', '早上好', 'Ciao', 'Guten Tag', 'صباح الخير', 'こんにちは。', 'Bonjour'];
+
+
+        var i = 0;
+
+        function myLoop() {
+            setTimeout(function () {
+                hello.innerHTML = helloArray[i];
+                i++;
+                if (i < helloArray.length) {
+                    myLoop();
+                }
+            }, 200)
+        }
+
+        window.addEventListener('load', function () {
+
+            myLoop();
+            setTimeout(function () {
+                loader.style.top = '-100%'
+            }, 2500)
+
+        })
     </script>
 </body>
 

@@ -156,7 +156,7 @@ p {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 7%;
+        margin-top: 11%;
         align-items: flex-end;
         padding-right: 10vw;
 
@@ -2339,6 +2339,57 @@ svg#topographic_2 {
         .color {
             height: 44px;
 
+        }
+    }
+}
+
+
+
+
+
+
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: $grey_2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .8s ease-in-out;
+
+    p {
+        font-size: 44px;
+        color: $white;
+        font-family: 'machina';
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            height: 11px;
+            width: 11px;
+            background-color: $white;
+            left: -44px;
+            top: 50%;
+            border-radius: 50%;
+            transform: translateY(-80%);
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            height: 11px;
+            width: 11px;
+            background-color: $white;
+            right: -44px;
+            top: 50%;
+            border-radius: 50%;
+            transform: translateY(-80%);
         }
     }
 }

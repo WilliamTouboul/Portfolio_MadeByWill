@@ -15,6 +15,8 @@
 </head>
 
 <body class="body_about body_contact">
+
+
     <div class="nav_toggle effect_button magnet">
         <div class="ico magnet">
             <div></div>
@@ -89,7 +91,7 @@
         </section>
         <section class="contact_main">
 
-            <div class="left">
+            <form action="https://formsubmit.co/will.touboul@gmail.com" method="POST" class="left">
                 <div class="form_item">
                     <div class="number">
                         01.
@@ -114,7 +116,7 @@
                     </div>
                     <div class="int">
                         <label for="object">De quoi avez vous besoins ?</label>
-                        <input type="text" id="object" placeholder="Design, branding, web...">
+                        <input type="text" id="object" name="object" placeholder="Design, branding, web...">
                     </div>
                 </div>
                 <div class="form_item">
@@ -126,7 +128,7 @@
                         <textarea name="message" id="message" placeholder="Votre message..."></textarea>
                     </div>
                 </div>
-                <button class="button_container">
+                <button type="submit" class="button_container">
                     <div class="button_contact_footer effect_button magnet">
                         <div class="ico text magnet">
                             <p>Envoyer !</p>
@@ -134,7 +136,11 @@
                         <div class="effect_button_inside"></div>
                     </div>
                 </button>
-            </div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+
+
+            </form>
 
             <div class="right">
                 <svg width="25px" height="25px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg"

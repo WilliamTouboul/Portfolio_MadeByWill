@@ -99,10 +99,11 @@
         </section>
 
 
-        <section class="about_1" >
+        <section class="about_1">
             <div class="left" style="margin-right: 44px;">
                 <p>
-                    Je suis un développeur web full stack et designer polyvalent. déterminé à créer des expériences numériques exceptionnelles qui engagent et inspirent les utilisateurs.
+                    Je suis un développeur web full stack et designer polyvalent. déterminé à créer des expériences
+                    numériques exceptionnelles qui engagent et inspirent les utilisateurs.
                 </p>
             </div>
             <div class="right">
@@ -122,7 +123,8 @@
                     </h4>
                     <p>
                         Je vous livre des designs solides et conviviaux pour vous et votre audience. La création
-                        d'une image de marque solide est la base de tout et je vous aiderai à la sublimer pour attirer et
+                        d'une image de marque solide est la base de tout et je vous aiderai à la sublimer pour attirer
+                        et
                         fidéliser.
                     </p>
                 </div>
@@ -880,12 +882,12 @@
                 </div>
 
                 <div class="button_container">
-                    <div class="button_contact_footer effect_button magnet">
+                    <a hef="contact.html" class="button_contact_footer effect_button magnet">
                         <div class="ico text magnet">
                             <p>Dites moi tout</p>
                         </div>
                         <div class="effect_button_inside"></div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="footer_bot">
@@ -999,7 +1001,7 @@
                 scrub: true,
                 easing: 'Power2.out'
             },
-            y: -200,
+            y: -120,
             easing: Power3.easeIn,
         });
 
@@ -1026,6 +1028,39 @@
             y: -310,
             easing: Power3.easeIn,
         });
+    </script>
+
+    <script>
+        const effect_button = document.querySelectorAll('.effect_button');
+
+        effect_button.forEach((item, index) => {
+            let inside = item.querySelector('.effect_button_inside')
+
+            item.addEventListener('mouseover', () => {
+                gsap.to(inside, {
+                    top: 0,
+                    duration: .45,
+                    ease: Power3.easeIn,
+                })
+            })
+
+            item.addEventListener('mouseout', () => {
+                let tl = new gsap.timeline({});
+
+                tl.to(inside, {
+                    top: -100 + '%',
+                    duration: .45,
+                    ease: Power3.easeIn,
+
+                });
+
+                tl.set(inside, {
+                    top: 100 + '%',
+                    ease: Power3.easeIn,
+
+                })
+            })
+        })
     </script>
     <script src="assets/js/nav.js"></script>
 

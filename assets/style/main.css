@@ -144,7 +144,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 7%;
+  margin-top: 11%;
   align-items: flex-end;
   padding-right: 10vw;
 }
@@ -1996,4 +1996,46 @@ svg#topographic_2 path {
   .palette .color {
     height: 44px;
   }
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: #181C1F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s ease-in-out;
+}
+.loader p {
+  font-size: 44px;
+  color: #F5F9F9;
+  font-family: "machina";
+  position: relative;
+}
+.loader p:after {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: #F5F9F9;
+  left: -44px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-80%);
+}
+.loader p:before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: #F5F9F9;
+  right: -44px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-80%);
 }/*# sourceMappingURL=main.css.map */
